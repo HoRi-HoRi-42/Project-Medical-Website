@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Regele Mihai</title>
+    <style>
+      /* Add a baby blue background color */
+      body {
+        background-color: lightblue;
+      }
+
+      .cross {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        width: 120px;
+        height: 120px;
+        background-image: url("data:image/jpeg;base64,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");
+        background-size: cover;
+        background-color: transparent;
+      }
+
+      .cross-text {
+        position: absolute;
+        right: 27px;
+        top: 160px;
+        width: 100px;
+        text-align: left;
+        font-family: "Helvetica Neue", sans-serif;
+        font-style: italic;
+        color: rgb(255,0,0);
+      }
+
+  
+      .cross {
+        animation: pulse 4s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.15);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+      /* Change the font to a modern sans-serif font */
+      body,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      a {
+        font-family: "Helvetica Neue", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Regele Mihai</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="http://localhost:8080/login">Login</a></li>
+        <li><a href="http://localhost:8080/chatBot">Discuta cu Mihai</a></li>
+        <li><a href="#about">Despre noi</a></li>
+        <li><a href="http://localhost:8080/programari">Programari</a></li>
+        <li><a href="#doctors">Doctori</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="http://localhost:8080/bmi">Calculator BMI</a></li>
+        <li><a href="http://localhost:8080/veziprogramari">Vezi programari</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section id="about">
+        <h2>Despre noi</h2>
+        <p>Insert information about your medical institution here</p>
+      </section>
+      <section id="services">
+        <h2>Servicii</h2>
+        <ul>
+          <li>Insert a list of services offered by your medical institution</li>
+        </ul>
+      </section>
+      <section id="doctors">
+        <h2>Doctori</h2>
+        <ul>
+          <li>Insert a list of doctors at your medical institution</li>
+        </ul>
+      </section>
+      <section id="contact">
+        <h2>Contact</h2>
+        <p>Insert contact information for your medical institution</p>
+      </section>
+    </main>
+    <footer>
+      <p>Copyright 2022 @ Regele Mihai</p>
+    </footer>
+    <!-- Add a red cross on the right top corner using JavaScript -->
+    <script>
+      var cross = document.createElement("div");
+      cross.classList.add("cross");
+      document.body.appendChild(cross);
+      var crossText = document.createElement("div");
+      crossText.classList.add("cross-text");
+      crossText.innerHTML = "Konnig Mihai";
+      document.body.appendChild(crossText);
+    </script>
+  </body>
+</html>

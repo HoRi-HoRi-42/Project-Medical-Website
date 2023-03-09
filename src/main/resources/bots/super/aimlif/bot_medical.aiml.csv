@@ -1,0 +1,15 @@
+0,BUNA,*,*,Buna ziua! Numele meu este Mihai. Cu ce va pot ajuta astazi?#Newline          Daca doriti sa va faceti o programare#Comma introduceti: PROGRAMARE.#Newline          Daca aveti probleme de sanatate#Comma introduceti: MA SIMT RAU.,bot_medical.aiml
+0,SALUT,*,*,Buna ziua! Numele meu este Mihai. Cu ce va pot ajuta astazi?#Newline          Daca doriti sa va faceti o programare#Comma introduceti: PROGRAMARE.#Newline          Daca aveti probleme de sanatate#Comma introduceti: MA SIMT RAU.,bot_medical.aiml
+0,PROGRAMARE,*,*,Desigur. Accesati acest link pentru programari:,bot_medical.aiml
+0,MA SIMT RAU,*,*,Imi puteti da mai multe detalii?&#13;#Newline          Daca va doare in zona capului#Comma introduceti: CAP.#Newline          Daca va doare in zona abdominala#Comma introduceti: ABDOMEN.#Newline          Daca va dor mainile#Comma picioarele sau spatele#Comma introduceti: OASE.#Newline          Daca aveti probleme cu vederea#Comma introduceti: OCHI.#Newline          Daca aveti probleme cu pielea (iritatii#Comma eczeme etc.)#Comma introduceti: PIELE.#Newline          Daca ametiti#Comma introduceti: AMETEALA.#Newline          Daca aveti alt tip de probleme#Comma introduceti: ALTCEVA.,bot_medical.aiml
+0,CAP,*,*,Ce parte a capului va doare?#Newline          Pentru partea frontala#Comma introduceti: FRUNTE.#Newline          Pentru orice alta parte#Comma introduceti: ALTCEVA.,bot_medical.aiml
+0,FRUNTE,*,*,S-ar putea sa aveti probleme cu sinusurile. Va voi redirectiona spre un medic:,bot_medical.aiml
+0,ABDOMEN,*,*,Am inteles. Va voi redirectiona spre un medic:,bot_medical.aiml
+0,OASE,*,*,Am inteles. Va voi redirectiona spre un medic:,bot_medical.aiml
+0,OCHI,*,*,Sunteti purtator de ochelari?#Newline           Introduceti DA#Comma daca raspunsul este da.#Newline           Introduceti NU#Comma daca raspunsul este nu.,bot_medical.aiml
+0,DA,*,*,Ar trebui sa faciti un nou control. Accesati acest link pentru programari:,bot_medical.aiml
+0,NU,*,*,S-ar putea sa aveti nevoie de ochelari. Va voi redirectiona spre un medic:,bot_medical.aiml
+0,PIELE,*,*,Am inteles. Va voi redirectiona spre un medic:,bot_medical.aiml
+0,AMETEALA,*,*,Asta poate avea mai multe cauze.#Newline          Daca aveti cumva si senzatii de greata#Comma introduceti: GREATA.#Newline          Daca aveti un alt tip de simptom#Comma introduceti: ALTCEVA.,bot_medical.aiml
+0,GREATA,*,*,Asta poate avea mai multe cauze. Va voi redirectiona spre un medic:,bot_medical.aiml
+0,ALTCEVA,*,*,Am inteles. Va voi redirectiona spre un medic:,bot_medical.aiml

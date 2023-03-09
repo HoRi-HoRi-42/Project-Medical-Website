@@ -1,0 +1,30 @@
+dtmc
+
+const int BMI_UNDERWEIGHT = 1;
+const int BMI_NORMAL = 2;
+const int BMI_OVERWEIGHT = 3;
+const int BMI_OBESE = 4;
+
+const int GENDER_MALE = 1;
+const int GENDER_FEMALE = 2;
+
+module diabetes
+BMI : [BMI_UNDERWEIGHT..BMI_OBESE] init BMI_NORMAL;
+gender : [GENDER_MALE..GENDER_FEMALE] init GENDER_MALE;
+age : [0..100] init 30;
+family_history : bool init true;
+diabetes : bool init false;
+
+[obese] BMI = BMI_OBESE & !diabetes & family_history=true -> 0.9 : (diabetes' = true) + 0.1 : (diabetes' = false);
+[overweight] BMI = BMI_OVERWEIGHT -> 0.3 : (diabetes' = true) + 0.7 : (diabetes' = false);
+[normal] BMI = BMI_NORMAL -> 0.1 : (diabetes' = true) + 0.9 : (diabetes' = false);
+[underweight] BMI = BMI_UNDERWEIGHT -> 0.01 : (diabetes' = true) + 0.99 : (diabetes' = false);
+[female] gender = GENDER_FEMALE -> 0.15 : (diabetes' = true) + 0.85 : (diabetes' = false);
+[family] family_history = true -> 0.4 : (diabetes' = true) + 0.6 : (diabetes' = false);
+[age] age > 40 -> 0.2 : (diabetes' = true) + 0.8 : (diabetes' = false);
+
+[gain_weight] BMI = BMI_NORMAL & age > 30 -> 0.5 : (BMI' = BMI_OVERWEIGHT) + 0.5 : (BMI' = BMI_NORMAL);
+[lose_weight] BMI = BMI_OVERWEIGHT & age > 30 -> 0.5 : (BMI' = BMI_NORMAL) + 0.5 : (BMI' = BMI_OVERWEIGHT);
+[age_transition] age < 50 -> 0.5 : (age' = age + 1) + 0.5 : (age' = age);
+
+endmodule

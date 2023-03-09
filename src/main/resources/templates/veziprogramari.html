@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <style>
+      body {
+        background-color: lightblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .button {
+        background-color: grey;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+
+  <div th:if="${param.error}">
+    <div class="alert alert-info">Utilizatorul nu se afla in baza de date!</div>
+  </div>
+
+  <div th:if="${param.pacientNotLoggedIn}">
+    <div class="alert alert-info">Pacientul nu este inregistrat!</div>
+  </div>
+
+  <div th:if="${param.doctorNotLoggedIn}">
+    <div class="alert alert-info">Doctorul nu este inregistrat!</div>
+  </div>
+
+    <form th:action="@{/veziprogramari}" method="post" th:object="${user}">
+      <label for="prenume" style="font-size: 20px">Prenume:</label><br>
+      <input type="text" id="prenume" th:value="${prenume}" name="prenume"><br><br>
+      <label for="nume" style="font-size: 20px">Nume:</label><br>
+      <input type="text" id="nume" th:value="${nume}" name="nume"><br>
+      <input type="submit" value="Vezi Programari" class="button">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Programari</title>
+  <link rel="stylesheet" href="/css/fisier1.css">
+</head>
+<body>
+  <h1>Programeaza-te aici</h1>
+
+  <div th:if="${param.success}">
+    <div class="alert alert-info">Programare inregistrata!</div>
+  </div>
+
+  <div th:if="${param.error}">
+    <div class="alert alert-info">Data si ora programarii selectate de dumneavoastra sunt indisponibile!</div>
+  </div>
+
+  <div th:if="${param.pacientNotFound}">
+    <div class="alert alert-info">Niciun pacient cu acest nume in baza de date!</div>
+  </div>
+
+  <div th:if="${param.pacientNotLoggedIn}">
+    <div class="alert alert-info">Pacientul nu este inregistrat!</div>
+  </div>
+
+  <div th:if="${param.doctorNotFound}">
+    <div class="alert alert-info">Niciun doctor cu acest nume in baza de date!</div>
+  </div>
+
+  <div th:if="${param.notADoctor}">
+    <div class="alert alert-info">Acesta nu este un doctor!</div>
+  </div>
+
+  <form th:action="@{/programari}" method="post" th:object="${appointment}">
+    <label for="date">Data:</label><br>
+
+    <input type="date" id="date" th:value="${#temporals.format(date,'yyyy-MM-dd')}" name="date" /><br><br>
+
+    <label for="time">Ora:</label><br>
+
+    <input type="time" id="time" th:value="${time}" name="time"><br><br>
+
+    <label for="pacientFirstName"> Prenume pacient: </label><br>
+
+    <input type="text" id="pacientFirstName" th:value="${pacientFirstName}" name="pacientFirstName"><br><br>
+
+    <label for="pacientLastName"> Nume pacient: </label><br>
+
+    <input type="text" id="pacientLastName" th:value="${pacientLastName}" name="pacientLastName"><br><br>
+
+    <label for="docFirstName"> Prenume doctor: </label><br>
+
+    <input type="text" id="docFirstName" th:value="${docFirstName}" name="docFirstName"><br><br>
+
+    <label for="docLastName"> Nume doctor: </label><br>
+
+    <input type="text" id="docLastName" th:value="${docLastName}" name="docLastName"><br><br>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+
+
+  <h2>Upcoming Appointments:</h2>
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Time</th>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</body>
+</html>

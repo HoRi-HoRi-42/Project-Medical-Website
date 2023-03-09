@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: bot_profile.aiml -->
+<!-- Author: Nitish Srivastava -->
+<!-- Last modified: November 25, 2020 -->
+<!--  -->
+<!-- This AIML file is part of the SUPER 0.0.0.1 chat bot knowledge base. -->
+<!--  -->
+<!-- The SUPER brain is Copyright &copy; 2020 by DNS. -->
+<!--  -->
+<!-- The SUPER brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as published by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information see http://www.alicebot.org -->
+<category><pattern>BUNA</pattern>
+<template>Buna ziua! Numele meu este Mihai. Cu ce va pot ajuta astazi?
+          Daca doriti sa va faceti o programare, introduceti: PROGRAMARE.
+          Daca aveti probleme de sanatate, introduceti: MA SIMT RAU.</template>
+</category>
+<category><pattern>SALUT</pattern>
+<template>Buna ziua! Numele meu este Mihai. Cu ce va pot ajuta astazi?
+          Daca doriti sa va faceti o programare, introduceti: PROGRAMARE.
+          Daca aveti probleme de sanatate, introduceti: MA SIMT RAU.</template>
+</category>
+<category><pattern>PROGRAMARE</pattern>
+<template>Desigur. Accesati acest link pentru programari:</template>
+</category>
+<category><pattern>MA SIMT RAU</pattern>
+<template>Imi puteti da mai multe detalii?&#xD;
+          Daca va doare in zona capului, introduceti: CAP.
+          Daca va doare in zona abdominala, introduceti: ABDOMEN.
+          Daca va dor mainile, picioarele sau spatele, introduceti: OASE.
+          Daca aveti probleme cu vederea, introduceti: OCHI.
+          Daca aveti probleme cu pielea (iritatii, eczeme etc.), introduceti: PIELE.
+          Daca ametiti, introduceti: AMETEALA.
+          Daca aveti alt tip de probleme, introduceti: ALTCEVA.</template>
+</category>
+<category><pattern>CAP</pattern>
+<template>Ce parte a capului va doare?
+          Pentru partea frontala, introduceti: FRUNTE.
+          Pentru orice alta parte, introduceti: ALTCEVA.</template>
+</category>
+<category><pattern>FRUNTE</pattern>
+<template>S-ar putea sa aveti probleme cu sinusurile. Va voi redirectiona spre un medic: </template>
+</category>
+<category><pattern>ABDOMEN</pattern>
+<template>Am inteles. Va voi redirectiona spre un medic: </template>
+</category>
+<category><pattern>OASE</pattern>
+<template>Am inteles. Va voi redirectiona spre un medic: </template>
+</category>
+<category><pattern>OCHI</pattern>
+<template> Sunteti purtator de ochelari?
+           Introduceti DA, daca raspunsul este da.
+           Introduceti NU, daca raspunsul este nu. </template>
+</category>
+<category><pattern>DA</pattern>
+<template> Ar trebui sa faciti un nou control. Accesati acest link pentru programari: </template>
+</category>
+<category><pattern>NU</pattern>
+<template> S-ar putea sa aveti nevoie de ochelari. Va voi redirectiona spre un medic: </template>
+</category>
+<category><pattern>PIELE</pattern>
+<template>Am inteles. Va voi redirectiona spre un medic: </template>
+</category>
+<category><pattern>AMETEALA</pattern>
+<template>Asta poate avea mai multe cauze.
+          Daca aveti cumva si senzatii de greata, introduceti: GREATA.
+          Daca aveti un alt tip de simptom, introduceti: ALTCEVA.</template>
+</category>
+<category><pattern>GREATA</pattern>
+<template>Asta poate avea mai multe cauze. Va voi redirectiona spre un medic: </template>
+</category>
+<category><pattern>ALTCEVA</pattern>
+<template>Am inteles. Va voi redirectiona spre un medic: </template>
+</category>
+</aiml>
